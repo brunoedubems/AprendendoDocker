@@ -1,0 +1,47 @@
+##  Lista  ####
+docker xxxxxxxxx         ls    # LISTA XXX ATIVOS
+docker xxxxxxxxx         ls -a   # LISTA XXX todos os xxxx ativos e inativos
+       image
+       container
+
+##  Execulta  ####
+Docker image run -p 8080: nome-da-imagem
+docker  xxxxxxxxx run       -P  8080:80    xxxx
+        image                PORTA          NOME
+        container
+
+
+##  Cria Image  ####
+FROM nginx:latest
+RUN 
+
+ docker image build -t ex-simple-build .
+    -t → o nome que vc quer colocar na imagem
+    . → ele procura o dockerfile, nesse caso o ponto vai procurar na pasta local o qual está o diretorio DOS
+                    
+#COPIANDO CONTEUDO
+docker image build -t ex-build-copy . → CRIA A imagem
+        <a href="conteudo.html">Conteudo do site</a>
+                FROM nginx:latest
+                LABEL maintainer 'Aluno bruno'
+
+                RUN echo '<h1>Conteudo da pagina conteudo, pelo dockerfile</h1>' > usr/share/nginx/html/conteudo.html
+                COPY *.html /usr/share/nginx/html/
+
+
+
+docker container run -p 80:80 ex-build-copy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
